@@ -1,26 +1,37 @@
+/**
+ * @name Cybervirus 2077
+ * @author Patryk Bielanin | bielak - edit: HOTFIXEZ
+ * @description Cyberpunk 2077 UI styled theme for better discord with a toxic twist.
+ * @version 1.0.15.1
+ * @website https://github.com/PatrykBielanin/discord-cyberpunk2077-theme
+ * @donate https://www.paypal.com/donate/?hosted_button_id=PGVKB863SXYUQ
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani');
+
 /* ===============
     THEME PALETTE
     ===============
 */
 :root {
-    --cp-background: var(--background-primary, linear-gradient(180deg, rgba(0,0,0,.75) 10%, rgba(0,0,0,1) 65%));
+    --cp-background: var(--background-primary,(180deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 0%));
     --cp-background-secondary: var(--background-secondary, var(--cp-background));
     --font-primary: 'Rajdhani';
     --primary-text-color: lightgray;
 
-    --primary: 23, 13, 22;
-    --red: 255, 0, 60;
-    --blue: 114, 234, 248;
-    --yellow: 243, 230, 0;
-    --green: 71, 213, 139;
-    --dark-green: 56, 171, 111;
+    --primary: 0, 0, 0;  /* Background color mainly used for popups */
+    --red: 255, 255, 0; /* Use RGB values */
+    --blue: 0, 251, 0 ; /* Use RGB values */
+    --yellow: 16, 251, 255; /* Use RGB values */
+    --green: 71, 213, 139; /* Use RGB values */
+    --dark-green: 16, 251, 255, 0.6; /* Use RGB values */
 
     --avatar-circle: 0;
     --avatar-rounded: 5px;
     --avatar-border: 1px solid var(--neon-red-color);
 
     /* derived palette */
-    --primary-color: rgba(var(--primary), 0.9);
+    --primary-color: rgba(var(--primary), 1);
     --dark-primary-color: rgba(var(--primary), 1);
     --light-primary-color: rgba(var(--primary), 0.6);
 
@@ -31,10 +42,10 @@
 
     --light-neon-red-color: rgba(var(--red), 0.5);
     --light-neon-blue-color: rgba(var(--blue), 0.65);
-    --light-neon-yellow-color: rgba(var(--yellow), 0.5);
+    --light-neon-yellow-color: rgba(var(--yellow), 0.6);
     --light-neon-green-color: rgba(var(--green), 1);
 
-    --dark-neon-red-color: rgba(var(--red), 0.25);
+    --dark-neon-red-color: rgba(var(--red), 0.5);
     --dark-neon-green-color: rgb(var(--dark-green));
 }
 
@@ -46,10 +57,10 @@ body,
 .theme-dark:not(html, .custom-user-profile-theme),
 .theme-light:not(html, .custom-user-profile-theme) {
     /* backgrounds */
-    --background-base-lowest: var(--dark-primary-color);
-    --background-base-lower: var(--dark-primary-color);
-    --background-base-low: var(--dark-primary-color);
-    --background-surface-high: var(--dark-primary-color);
+    --background-base-lowest: var(--primary-color);
+    --background-base-lower: var(--primary-color);
+    --background-base-low: var(--primary-color);
+    --background-surface-high: var(--primary-color);
     --background-surface-higher: var(--primary-color);
     --background-surface-highest: var(--primary-color);
     --background-mod-subtle: rgba(var(--blue), 0.06);
@@ -57,27 +68,27 @@ body,
     --background-mod-strong: rgba(var(--blue), 0.16);
     --background-brand: var(--neon-red-color);
     --background-scrim: rgba(0, 0, 0, 0.8);
-    --app-frame-background: var(--dark-primary-color);
+    --app-frame-background: var(--primary-color);
     --app-frame-border: var(--light-neon-red-color);
     --chat-background-default: transparent;
-    --home-background: var(--dark-primary-color);
-    --modal-background: var(--dark-primary-color);
-    --modal-footer-background: var(--light-primary-color);
-    --card-background-default: var(--light-primary-color);
-    --input-background-default: var(--dark-primary-color);
+    --home-background: var(--primary-color);
+    --modal-background: var(--primary-color);
+    --modal-footer-background: var(--primary-color);
+    --card-background-default: var(--primary-color);
+    --input-background-default: var(--primary-color);
 
     /* backgrounds (legacy) */
-    --background-primary: black;
-    --background-secondary: var(--dark-primary-color);
-    --background-secondary-alt: var(--dark-primary-color);
-    --background-tertiary: var(--dark-primary-color);
-    --background-floating: var(--primary-color);
-    --background-accent: var(--light-primary-color);
-    --background-modifier-accent: var(--light-neon-red-color);
+    --background-primary: rgb(--primary-color);
+    --background-secondary: var(--primary-color);
+    --background-secondary-alt: var(--primary-color);
+    --background-tertiary: var(--primary-color);
+    --background-floating: var(---primary-color-primary-color);
+    --background-accent: var(--primary-color);
+    --background-modifier-accent: var(--primary-color);
     --background-mentioned: rgba(var(--yellow), 0.1);
-    --background-gradient-high: var(--cp-background-secondary);
+    --background-gradient-high: var(--primary-color);
     --background-gradient-chat: transparent;
-    --background-gradient-app-frame: var(--dark-primary-color);
+    --background-gradient-app-frame: var(--primary-color);
 
     /* text */
     --text-default: var(--primary-text-color);
@@ -138,7 +149,7 @@ body,
 
     /* Nitro client themes */
     --custom-theme-text-color: var(--primary-text-color);
-    --custom-theme-base-color: var(--dark-primary-color);
+    --custom-theme-base-color: var(--primary-color);
     --custom-theme-base-color-amount: 100%;
     --custom-theme-text-color-amount: 50%;
     --custom-theme-border-color: var(--neon-blue-color);
@@ -484,7 +495,7 @@ body,
   {
     border-radius: 0;
     background: var(--primary-color);
-    border-bottom: 1px solid var(--neon-red-color);
+    border-bottom: 1px solid var(--primary-color);
   }
 
    /* Usernames font */
@@ -602,11 +613,16 @@ body,
     border-color: var(--neon-blue-color);
   }
 
-  .container_rE8-46 .replyBar_rE8-46 {
-    background: var(--light-neon-blue-color);
+  .container_rE8-46 .replyBar_rE8-46,
+  [class*="replyBar"],
+  [class*="ReplyBar"] {
+    background: linear-gradient(180deg, rgba(0, 40, 0, 0.85) 0%, rgba(0, 0, 0, 0.95) 100%) !important;
+    border-top: 1px solid var(--neon-blue-color) !important;
   }
 
-  .container_rE8-46 .replyBar_rE8-46 .replyLabel_rE8-46 {
+  .container_rE8-46 .replyBar_rE8-46 .replyLabel_rE8-46,
+  [class*="replyBar"] [class*="replyLabel"],
+  [class*="ReplyBar"] [class*="Label"] {
     color: white !important;
   }
 
@@ -701,6 +717,16 @@ body,
   /* Main container with messages */
   .messagesWrapper_8AE1Qq {
     margin-bottom: 1rem;
+    background: black !important;
+  }
+
+  /* Force solid black chat background (removes any residual red-tinted gradient) */
+  .chatContent_z_gUBg,
+  .chat_z_gUBg .content_z_gUBg,
+  .scroller_8AE1Qq,
+  .messagesWrapper_8AE1Qq .scroller_8AE1Qq {
+    background: black !important;
+    background-image: none !important;
   }
 
   /* ===============
@@ -1018,7 +1044,7 @@ body,
 
    /* Friends list container */
   .container_zrUwGA .peopleColumn_zrUwGA {
-    background: linear-gradient(180deg, rgba(23,0,5,1) 12%, rgba(0,0,0,1) 67%);
+    background: linear-gradient(180deg, rgb(0, 0, 0) 12%, rgba(0,0,0,1) 67%);
   }
 
   .container_zrUwGA .container_ybUK7Z {
@@ -1137,7 +1163,7 @@ body,
   }
 
   .homeWrapperNormal_8iSxT3 .mainPageScroller_IRnLy8 {
-    background: linear-gradient(180deg, rgba(23,0,5,1) 10%, rgba(0,0,0,1) 65%);
+    background: linear-gradient(180deg, rgb(0, 0, 0) 10%, rgba(0,0,0,1) 65%);
   }
 
   .theme-dark .card_f8e6bf {
@@ -1159,7 +1185,7 @@ body,
   }
 
   .chat_z_gUBg .content_z_gUBg {
-    background: linear-gradient(180deg, rgba(23,0,5,1) 10%, rgba(0,0,0,1) 65%);
+    background: linear-gradient(180deg, rgb(0, 0, 0) 10%, rgba(0,0,0,1) 65%);
   }
 
   .chat_z_gUBg .content_z_gUBg .sectionTitle_nMe-a6 {
@@ -1190,7 +1216,7 @@ body,
   }
 
   .shop_Mqg79R .shopViewWrapper_Mqg79R {
-    background: linear-gradient(180deg, rgba(23,0,5,1) 10%, rgba(0,0,0,1) 65%);
+    background: linear-gradient(180deg, rgb(0, 0, 0) 10%, rgba(0,0,0,1) 65%);
   }
 
   .shop_Mqg79R .shopCard_lmQhFf {
@@ -1208,7 +1234,7 @@ body,
       ===============
   */
   .root_oez3v3 .scroller_0jpYct {
-    background: linear-gradient(180deg, rgba(23,0,5,1) 10%, rgba(0,0,0,1) 65%);
+    background: linear-gradient(180deg, rgb(0, 0, 0) 10%, rgba(0,0,0,1) 65%);
   }
 
   /* Server boost header */
